@@ -1,5 +1,6 @@
 # JavaBBS社区
 
+注：该项目参考https://github.com/ChinaLHR/JavaQuarkBBS一年多以前和源码作者进行了线上视频学习和指导，对原作者的项目进行了学习和改动。
 
 ## 简介
 	1、JavaBBS是一款使用Java编写的简易社区系统。
