@@ -18,4 +18,10 @@ public class PasswordHelper {
         //String newPassword = new SimpleHash(algorithmName, user.getPassword()).toHex();
         user.setPassword(newPassword);
     }
+    public static void main(String[] agrs){
+        PasswordHelper passwordHelper = new PasswordHelper();
+        String password = "noway";
+        String newPassword = new SimpleHash(passwordHelper.algorithmName, password,  ByteSource.Util.bytes("admin"), passwordHelper.hashIterations).toHex();
+        System.out.println(newPassword);
+    }
 }
