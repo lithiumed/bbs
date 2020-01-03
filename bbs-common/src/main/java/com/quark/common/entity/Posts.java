@@ -55,6 +55,17 @@ public class Posts implements Serializable {
     @Column(name = "reply_count")
     private int replyCount = 0;
 
+    //是否可见
+    @Column(name = "visible")
+    private int visible;
+
+    public int getVisible() {
+        return visible;
+    }
+
+    public void setVisible(int visible) {
+        this.visible = visible;
+    }
 
     public Integer getId() {
         return id;

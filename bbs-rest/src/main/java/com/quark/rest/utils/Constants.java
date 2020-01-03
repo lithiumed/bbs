@@ -13,6 +13,6 @@ public class Constants {
 
     //Upload常量
     public static final String UPLOAD_PATH = "/Users/lithiumed/Downloads/";
-    public static final String STATIC_URL = "http://127.0.0.1:8086/images/upload/";
+    public static final String STATIC_URL = "http://192.168.8.109:8086/images/upload/";
 
 }

@@ -77,11 +77,12 @@ public class PostsServiceImpl extends BaseServiceImpl<PostsDao, Posts> implement
                 Path<Boolean> $top = root.get("top");
                 Path<Boolean> $good = root.get("good");
                 Path<String> $title = root.get("title");
+                Path<Integer> $visible = root.get("visible");
                 ArrayList<Predicate> list = new ArrayList<>();
                 if (type != null && type.equals("good")) list.add(criteriaBuilder.equal($good, true));
                 if (type != null && type.equals("top")) list.add(criteriaBuilder.equal($top, true));
                 if (search != null && search != "") list.add(criteriaBuilder.like($title, "%" + search + "%"));
-
+                list.add(criteriaBuilder.equal($visible,1));
                 Predicate predicate = criteriaBuilder.and(list.toArray(new Predicate[list.size()]));
                 return predicate;
             }
